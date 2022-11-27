@@ -1,0 +1,63 @@
+
+$white: #ffffff;
+$black: #000000;
+$lightGray: #F5F5F5;
+$lighLightGray: #F9F9F9;
+$gray: #d8d8d8;
+$darkGray: #8A8A8A;
+
+$darkBlue: #293F8B;
+$darkDarkBlue: #253879;
+$blue: #0085FF;
+
+$green: #00AC5A;
+$lightGreen: #DEFFEF;
+
+$yellow: #FFDC72;
+$darkYellow: #C79500;
+
+$red: #B01500;
+$brightRed: #FF0000;
+$lightLightRed: #FFEAEA;
+$lightRed: #FFC4C4;
+
+$bsSuccess: #198754;
+$bsDanger: #dc3545;
+
+.c-green{color: $green;}
+.c-dark-yellow{color: $darkYellow;}
+.c-red{color: $red;}
+.c-bright-red{color: $brightRed;}
+.c-dark-gray{color: $darkGray;}
+.c-dark-blue{color: $darkBlue;}
+.c-gray{color: $gray;}
+.c-blue{color: $blue;}
+.bg-white{
+    background-color: $white;
+}
+.bg-blue{background-color: $blue; color: $white;}
+.bg-darkblue{
+background-color: $darkBlue;
+color: $white;
+}
+.bg-light-green{
+    background-color: $lightGreen;
+}
+.bg-yellow{
+    background-color: $yellow;
+}
+.bg-light-light-red{
+    background-color: $lightLightRed;
+}
+.bg-light-red{
+    background-color: $lightRed;
+}
+.bg-light-gray{
+    background-color: $lightGray;
+}
+.bg-light-light-gray{
+    background-color: $lighLightGray;
+}
+.shadow{
+    box-shadow: 4px -4px 20px $lightGray;
+}

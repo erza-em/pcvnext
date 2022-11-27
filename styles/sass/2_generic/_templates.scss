@@ -1,0 +1,41 @@
+
+.form-check-input[type=radio] {
+    border-radius: 0;
+}
+// table.dataTable{
+//     border-radius: 10px;
+//     thead{
+//         th, td {
+//             border-bottom: none;
+//             padding: 20px 10px;
+//         }
+//     } 
+//     tbody {
+//         th,td{
+//             padding: 15px 10px;
+//         }
+        
+//         td{
+//             border-bottom: 1px solid $lightGray;
+//         }
+//         tr:last-child{
+//             td{border-bottom: none;}
+//         }
+//     }
+    
+// }
+// table.dataTable.no-footer{
+//     border-bottom: 0;
+// }
+.form-group{
+    margin: 15px 0;
+    label{padding: 0;}
+  }
+.form-control:focus {
+    color: $black;
+    background-color: $white;
+    border-color: $gray;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(220 220 220 / 25%);
+}
+.btn{margin: 5px;}

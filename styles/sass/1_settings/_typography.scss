@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Montserrat-Reg";
+    src: url("./../../../public/assets/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("./../../../public/assets/fonts/Montserrat-Medium.ttf");
+}
+$mont_reg: 'Montserrat-Reg';
+$mont_med: 'Montserrat-Medium';
+
+$t9: 9px;
+$t14: 14px;
+$t16: 16px;
+
+$h1: 37px;
+$h2: 21px;
+$t50: 50px;
+h1{
+    font-size: $h1;
+}
+h2{
+    font-family: $mont_med;
+    font-size: $h2;
+    font-weight: bold;
+
+}
+.t-50{font-size: $t50;}
+.t-9{font-size: $t9;}
+.t-bold{
+    font-weight: bold;
+    font-family: $mont_med;
+}
+//.form-check-input{border: none;}
+
+#table_agencies, #table_branches{
+    .form-check-input:checked{
+        background-color: $bsSuccess;
+        border-color: $bsSuccess;
+    }
+    .form-check-input{
+        background-color: $bsDanger;
+        border-color: $bsDanger;
+        background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e');
+    }
+    .form-check-input:focus {
+        box-shadow: none;
+    }
+}
