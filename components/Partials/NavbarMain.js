@@ -6,7 +6,9 @@ const NavbarMain = () => {
     return (
         <section id="main-navigator" className="bg-darkblue sidebar">
             <section id="logo-wrapper">
-                <Image src={Logo} alt="Postal Card Logo" />
+                <Link href="./" title="Home">
+                    <Image src={Logo} alt="Postal Card Logo" />
+                </Link>
                 <p>PostalCard Verification</p>
             </section>
             <ul>
@@ -19,7 +21,7 @@ const NavbarMain = () => {
                         <li><Link href="./users" title="Users"><i className="fa-solid fa-user"></i>Users</Link></li>
                     </ul>
                 </li>
-                <li><Link href="./report.php" title="Report Page"><i className="fa-solid fa-chart-simple"></i>Reports</Link></li>
+                <li><Link href="./" title="Report Page"><i className="fa-solid fa-chart-simple"></i>Reports</Link></li>
                 <li><Link href="./verification" title="Verification Page"><i className="fa-solid fa-credit-card"></i>Verification Page</Link></li>        
                 <li><Link href="https://phlpost.gov.ph/" target="_blank"  title="Post Office Website"><i className="fa-solid fa-arrow-up-right-from-square"></i>Post Office Website</Link></li>
                 

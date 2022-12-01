@@ -1,0 +1,22 @@
+body{
+    background: none;
+    color: #000;
+}
+.main-content-wrapper {
+    width: 100%;
+}
+.print-col-6{width: 50% !important;}
+.print-col-8{width: 66% !important;}
+.print-col-4{
+    width: 33% !important;
+}
+.print-col-12{
+    margin: 0 !important;
+    text-align: center;
+    width: 100% !important;
+}
+#upload-discrepancy-wrapper{display: none !important;}
+
+#btn-wrapper .prn-printable{
+        display: block !important;
+}

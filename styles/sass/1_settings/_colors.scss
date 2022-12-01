@@ -21,6 +21,8 @@ $brightRed: #FF0000;
 $lightLightRed: #FFEAEA;
 $lightRed: #FFC4C4;
 
+$bgGradientBlack: rgb(0 0 0 / 35%);
+
 $bsSuccess: #198754;
 $bsDanger: #dc3545;
 
@@ -32,10 +34,12 @@ $bsDanger: #dc3545;
 .c-dark-blue{color: $darkBlue;}
 .c-gray{color: $gray;}
 .c-blue{color: $blue;}
+.c-yellow{color: $yellow;}
 .bg-white{
     background-color: $white;
 }
 .bg-blue{background-color: $blue; color: $white;}
+.bg-gradient-black{background: $bgGradientBlack;}
 .bg-darkblue{
 background-color: $darkBlue;
 color: $white;

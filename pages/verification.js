@@ -2,35 +2,32 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React, { useRef, useState, useEffect, createContext } from 'react';
 import AppContext from '../components/AppContext';
-import VerifiedPRN from '../components/Partials/VerifiedPRN';
 import ButtonsConfirm from '../components/Verification/ButtonsConfirm';
-
+import Popup from '../components/Partials/Popup';
+import PrintableVerification from '../components/Verification/PrintableVerification';
 
 export default function Verification({user}) {
-    console.log(user)
-    // let username = 'Kevin'
-    // let userbranch = 'Branch'
-    // let useragency = 'Agency'
     
     const [contextPRN, setcontextPRN] = useState('')
     const [prnStatus, setprnStatus] = useState('Verify')
+    const [showPopup, setshowPopup] = useState(false)
     
     
     const [prnValue, setprnValue] = useState('');
 
-    const handleClick = async () => {
+    const verifyPRN = async () => {
 
         if (!prnValue.length == 0) {
             //let inputPRN = 'D12345'
-            console.log('clicked')
             await fetchPRN(prnValue)
         }else{
-            alert('Please input PRN Number')
+            setshowPopup(true)            
         }
     }
     useEffect(() => {
         setprnStatus('Verify')
     }, [prnValue]);
+    
 
     useEffect(() => {
         if (contextPRN != '') {
@@ -50,68 +47,13 @@ export default function Verification({user}) {
     
   
   return (
-    <AppContext.Provider value={{contextPRN, setcontextPRN}}>
-        <section id="test" className="main-content">
-            <section id="prn-verify-wrapper" className=" box-wrapper shadow-2 bg-white">
-                <h2 className="c-dark-blue">User Information:</h2>
-                <form>
-                    <div className="form-group row d-flex align-items-center">
-                        <label htmlFor="inputAgency" className="col-sm-2 col-form-label fw-bold">Agency</label>
-                        <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inputAgency" placeholder="Agency" value={user.agency} readOnly/>
-                        </div>
-                    </div>
-                    <div className="form-group row d-flex align-items-center">
-                        <label htmlFor="inputBranch" className="col-sm-2 col-form-label fw-bold">Branch</label>
-                        <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inputBranch" placeholder="Branch" value={user.branch} readOnly />
-                        </div>
-                    </div> 
-                
-                    <div className="form-group row d-flex align-items-center">
-                        <label htmlFor="inputOfficer" className="col-sm-2 col-form-label fw-bold">Verification Officer</label>
-                        <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inputOfficer" placeholder="Verification Officer" value={user.name} readOnly />
-                        </div>
-                    </div>
-                    
-                    <div className="form-group row d-flex align-items-center">
-                        <label htmlFor="inputDateTime" className="col-sm-2 col-form-label fw-bold">Date/Time Generated</label>
-                        <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inputDateTime" placeholder="Date/Time Generated" value="04 October 2022, 08:52:50" readOnly/>
-                        </div>
-                    </div>
-                </form>
-
-                <div className="line-hr"></div>
-                
-                
-                <section id="verify-postal-wrapper" className={prnStatus === 'Valid' ? 'd-none' : ''}>
-                    <h2 className="c-dark-blue">Postal Card Information</h2>
-                    <form id="frm-postal-card-info" className="d-flex align-items-end">
-                        <div className="flex-fill">
-                            <label htmlFor="inputPRN" className="form-label">PRN D12345</label>                           
-                            <input type="text" className="t-50 form-control" id="inputPRN" placeholder="PRN Number" onChange={event => setprnValue(event.target.value)}  />
-                        </div>
-                        <div id="captcha-wrapper" className="flex-fill">
-                            <label htmlFor="inputCaptcha" className="form-label">Captcha</label>
-                            <input type="text" className="form-control" id="inputCaptcha" placeholder="Captcha" value="34530" disabled readOnly />
-                            <br />
-                            <label htmlFor="inputCaptchaVerify" className="form-label">Type the characters above</label>
-                            <input type="text" className="form-control" id="inputCaptchaVerify" placeholder="Verify Captcha" />
-                        </div>
-                        <div className="flex-fill">
-                            {/* <button type="button" id="btn-verify-prn" className="btn btn-primary" onClick={handleClick}>{prnStatus}</button>
-                                                     */}
-                            <button type="button" id="btn-verify-prn" className="btn btn-primary" onClick={handleClick}>{prnStatus}</button>
-                        </div>
-                    </form>
-                </section>
-                {prnStatus === 'Valid' ? <VerifiedPRN /> : ''} 
-                
-            </section>
-            <br />
-
+    <AppContext.Provider value={{contextPRN, setcontextPRN, setprnValue, showPopup, setshowPopup, user, prnStatus, verifyPRN}}>
+        
+        
+        <section id="verification-wrapper" className="main-content">
+            {showPopup ? <Popup title="Please input PRN Number!" /> : ''}
+            <PrintableVerification />
+            <br />                                    
             {prnStatus === 'Valid' ? <ButtonsConfirm /> : ''}
         </section>
     </AppContext.Provider>

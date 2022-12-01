@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import AppContext from '../AppContext';
 
 export default function NavbarTop() {
-    console.log('TOP LOADED')
     return (
         <section className="top_navbar d-flex justify-content-between">
             <div id="hamburger" className=" d-flex align-items-center">

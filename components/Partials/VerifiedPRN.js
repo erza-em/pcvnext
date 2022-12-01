@@ -36,25 +36,25 @@ const VerifiedPRN = () => {
 
                 <section id="discrepancy-check">
                     <div className="row">
-                        <div className="offset-md-6 col-md-6">
+                        <div className="offset-md-6 col-md-6 print-col-12">
                             <h2 className="c-dark-blue">Discrepancy Check</h2>
                         </div>
                         
                     </div>
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-sm-6 print-col-6">
                             <Image src={IDfront} alt="Postal ID Front" className="img-fluid"/>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-sm-6 print-col-6">
                             <section id="checklist">
                                 <section className="row">
-                                    <div className="col-md-2 table-wrapper">
-                                        <span className="t-bold">Yes</span>
+                                    <div className="col-md-2 table-wrapper table-wrapper-center print-col-4">
+                                        <span className="t-bold">With</span>
                                     </div>
-                                    <div className="col-md-2 table-wrapper">
-                                        <span className="t-bold">No</span>
+                                    <div className="col-md-2 table-wrapper table-wrapper-center print-col-4">
+                                        <span className="t-bold">Without</span>
                                     </div>
-                                    <div className="col-md-8 table-wrapper">
+                                    <div className="col-md-8 table-wrapper print-col-4">
                                         <span className="t-bold">Items</span>
                                     </div>
                                 </section>
@@ -71,18 +71,18 @@ const VerifiedPRN = () => {
                     <br /><br />
 
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-sm-6 print-col-6">
                           
                             <Image src={IDback} alt="Postal ID Back" className="img-fluid"/>
                         </div>
-                        <div className="col-md-6 d-flex flex-column justify-content-end">
+                        <div className="col-sm-6 print-col-6 d-flex flex-column justify-content-end">
                             <CheckBack />
                         </div>
 
                     </div>
 
                     <div className="line-hr"></div>
-                    <section className="d-flex align-items-center flex-column">
+                    <section id="upload-discrepancy-wrapper" className="d-flex align-items-center flex-column">
                         <br />
                         <p className="fw-bold">If with discrepancy/ies, please upload a copy of the card.</p>
                         <button type="submit" id="btn-upload" className="btn btn-primary">Upload</button>
