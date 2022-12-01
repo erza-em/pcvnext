@@ -8,14 +8,14 @@ export default function Home() {
   }, [count]);
   return (
     <section className="main-content">
-      <h2>
+      {/* <h2>
           <div className="cleanslate w24tz-current-time w24tz-small" style={{background: 'none !important', padding: '0 !Important', display: 'inline-block !important', padding: '0 !Important', visibility: 'hidden !important', minWidth: 'auto !important', minHeight: 'auto !important'}}>
             <p>
               <a href="//24timezones.com/Manila/time" style={{textDecoration: 'none'}} className="clock24" id="tz24-1666322246-c1145-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM1MjBmNDYwYTBhYSIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="Manila actual time" target="_blank" rel="nofollow">
                 </a>
             </p>
           <div id="clock_block_cb63520f460a0aa"></div></div>          
-      </h2>
+      </h2> */}
         <section className="tiles-status d-flex ">
           <section className="tile d-flex flex-fill flex-column align-items-start px-5 py-4 bg-white">
               <p className="data c-green">3</p>

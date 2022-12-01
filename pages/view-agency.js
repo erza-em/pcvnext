@@ -2,8 +2,8 @@ export default function ViewAgency() {
     function editAgency() {
         let btnEdit = document.getElementById('btn-edit-branch')
         btnEdit.disabled = true
-        let allInputs = document.querySelectorAll('input');
-        let allSelect = document.querySelectorAll('select');
+        let allInputs = document.querySelectorAll('input')
+        let allSelect = document.querySelectorAll('select')
         console.log(allInputs)
         for(let i = 0; i < allInputs.length; i++) {
             allInputs[i].removeAttribute('disabled')
@@ -252,10 +252,10 @@ export default function ViewAgency() {
                             <p className="mb-1">Attach Document 2 <span className="c-red">*</span></p>
                         
                             <section className="c-dark-gray box-wrapper bg-light-light-gray border-dotted-blue d-flex align-items-center justify-content-center flex-column p-5">
-                                <span>Board Resolution or Secretary's Certificate indicating authorized signatory/ies, representative/s and main Admin in relation to the application, access and use of PostalCard Online Verification System (POVS)</span>
+                                <span>Board Resolution or {"Secretary's"} Certificate indicating authorized signatory/ies, representative/s and main Admin in relation to the application, access and use of PostalCard Online Verification System (POVS)</span>
                                 <button type="button" className="btn btn-primary mt-3">Upload</button>
                             </section>
-                        </section>
+                        </section> 
                         <section id="doc-3-wrapper" className="wrapper mb-5">
                             <p className="mb-1">Attach Document 3 <span className="c-red">*</span></p>
                         
@@ -277,7 +277,7 @@ export default function ViewAgency() {
                                 Submit
                             </button>
                         </div>
-                    </section>
+                    </section> 
                 </section>
             </section>
         </section>
