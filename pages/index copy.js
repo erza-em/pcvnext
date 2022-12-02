@@ -1,17 +1,6 @@
-import React, { useState, useEffect  } from 'react'
-import {UserAgency} from '../components/User/UserData'
-import {getRecordsToday} from '../components/User/Records'
-
-
+import React, { useState, useEffect  } from 'react';
+import {UserAgency} from '../components/User/UserData';
 export default function Home({pageTitle}) {
-  
-  const RecordsDataToday = getRecordsToday().props.children
-  const todayValid = RecordsDataToday[0].Valid  
-  const todayExpired = RecordsDataToday[0].Expired 
-  const todayNoRecord = RecordsDataToday[0].NoRecord
-  const todayDiscrepancy = RecordsDataToday[0].Discrepancy  
-  const todayTotal = RecordsDataToday[0].Total  
-
   return (
     <section className="main-content">
       {/* <h2>
@@ -23,25 +12,21 @@ export default function Home({pageTitle}) {
           <div id="clock_block_cb63520f460a0aa"></div></div>          
       </h2> */}
         <section className="tiles-status d-flex ">
-          <section className="tile d-flex flex-even flex-column align-items-center  bg-white c-green">              
-              <p>Valid</p>
-              <p className="data">{todayValid}</p>
+          <section className="tile d-flex flex-fill flex-column align-items-start px-5 py-4 bg-white">
+              <p className="data c-green">3</p>
+              <p>Active Agencies</p>
           </section>
-          <section className="tile d-flex flex-even flex-column align-items-center  bg-white c-dark-yellow">              
-              <p>Expired</p>
-              <p className="data">{todayExpired}</p>
+          <section className="tile d-flex flex-fill flex-column align-items-start px-5 py-4 bg-white">
+              <p className="data c-red">1</p>
+              <p>Deactivated Agencies</p>
           </section>
-          <section className="tile d-flex flex-even flex-column align-items-center  bg-white c-red">              
-              <p>No Records Found</p>
-              <p className="data">{todayNoRecord}</p>
+          <section className="tile d-flex flex-fill flex-column align-items-start px-5 py-4 bg-white">
+              <p className="data c-dark-gray">0</p>
+              <p>Suspended Agencies</p>
           </section>
-          <section className="tile d-flex flex-even flex-column align-items-center  bg-white c-bright-red">              
-              <p>With Discrepancy/ies</p>
-              <p className="data">{todayDiscrepancy}</p>
-          </section>
-          <section className="tile d-flex flex-even flex-column align-items-center  bg-white c-dark-gray">              
-              <p>Total</p>
-              <p className="data">{todayTotal}</p>
+          <section className="tile d-flex flex-fill flex-column align-items-start px-5 py-4 bg-white">
+              <p className="data c-yellow">0</p> 
+              <p>Pending</p>
           </section>
         </section>
         
@@ -172,7 +157,6 @@ export default function Home({pageTitle}) {
     </section>
   )
 }
-
 export async function getStaticProps() {
   return {
     props: {

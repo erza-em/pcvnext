@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { useContext } from 'react';
 import AppContext from '../AppContext';
-
-export default function NavbarTop() {
+import {UserName} from '../User/UserData';
+export default function NavbarTop({pageTitle}) {
     return (
         <section className="top_navbar d-flex justify-content-between">
             <div id="hamburger" className=" d-flex align-items-center">
-                <a href="#">
+                {/* <a href="#">
                     <i className="fa-solid fa-bars"></i>
-                </a>
+                </a> */}
+                <h1>{pageTitle}</h1>
             </div>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
@@ -45,7 +46,7 @@ export default function NavbarTop() {
                 
                 <div className="dropdown">
                     <section className="dropdown-toggle d-flex justify-content-center align-items-center" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <p>Dennis</p>
+                        <p>{UserName()}</p>
                         <div className="img-holder" style={{backgroundImage: `url(https://www.pngitem.com/pimgs/m/35-350426_profile-icon-png-default-profile-picture-png-transparent.png)`}}></div>
                     </section>
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

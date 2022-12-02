@@ -42,10 +42,10 @@ const VerifiedPRN = () => {
                         
                     </div>
                     <div className="row">
-                        <div className="col-sm-6 print-col-6">
+                        <div className="col-sm-6 print-col-12">
                             <Image src={IDfront} alt="Postal ID Front" className="img-fluid"/>
                         </div>
-                        <div className="col-sm-6 print-col-6">
+                        <div className="col-sm-6 print-col-12">
                             <section id="checklist">
                                 <section className="row">
                                     <div className="col-md-2 table-wrapper table-wrapper-center print-col-4">
@@ -71,11 +71,10 @@ const VerifiedPRN = () => {
                     <br /><br />
 
                     <div className="row">
-                        <div className="col-sm-6 print-col-6">
-                          
+                        <div className="col-sm-6 print-col-12">                          
                             <Image src={IDback} alt="Postal ID Back" className="img-fluid"/>
                         </div>
-                        <div className="col-sm-6 print-col-6 d-flex flex-column justify-content-end">
+                        <div className="col-sm-6 print-col-12 d-flex flex-column justify-content-end">
                             <CheckBack />
                         </div>
 
